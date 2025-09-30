@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>La liste de tout les etudiants</h1>
+
+    <ul>
+      {% for etudiant in etudiants %}
+      <li>
+        <a href="details/{{ etudiant.id }}"
+          >{{ etudiant.prenom }} {{ etudiant.nom }}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 20px;
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        max-width: 400px;
+        margin: auto;
+      }
+      li {
+        background-color: #fff;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+      }
+      li:nth-child(odd) {
+        background-color: #ecf0f1;
+      }
+      li:hover {
+        background-color: #bdc3c7;
+      }
+      a {
+        text-decoration: none;
+        color: #2980b9;
+        font-weight: bold;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </body>
+</html>

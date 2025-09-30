@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Détails de l'étudiant</h1>
+    <p>Prénom: {{ etudiant.prenom }}</p>
+    <p>Nom: {{ etudiant.nom }}</p>
+    {% comment %}
+    <p>Âge: {{ etudiant.age }}</p>
+    {% endcomment %}
+    <p>Email: {{ etudiant.email }}</p>
+    <p>Matricule: {{ etudiant.matricule }}</p>
+    <p>Téléphone: {{ etudiant.telephone }}</p>
+
+    <a href="{% url 'etudiants' %}">Retour à la liste des étudiants</a>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 20px;
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        color: #34495e;
+        max-width: 400px;
+        margin: 10px auto;
+      }
+      a {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #2980b9;
+        font-weight: bold;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </body>
+</html>
